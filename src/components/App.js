@@ -57,7 +57,7 @@ class App extends Component {
     .then(res => {
       this.setState({posts: res.data})
     })} else{
-    axios.get(`${baseUrl}/posts/filter?text${'='}${input}`)
+    axios.get(`${baseUrl}/posts/filter?text=${input}`)
     .then( res => {
       this.setState({posts: res.data})
     })
